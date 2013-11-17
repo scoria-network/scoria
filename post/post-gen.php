@@ -3,11 +3,16 @@
 require_once('comment-gen.php');
 
 function gen_post($row, $con) {
+	 $index = "0";
+	 
+	 if ($row[1] == $_SESSION['uid']) {
+	    $index = "me";
+	 }  
+
 	 echo "<tr>
-                  <td class=\"title-col\">0: $row[2]";
-		  
+                  <td class=\"title-col\">$index: $row[2]";
 	 	
-        gen_comments($con, $row[0]);
+        gen_comments($con, $row);
 	
 
 	 ?>
@@ -17,6 +22,23 @@ function gen_post($row, $con) {
 	 <input type="text" name="content" size=35 />
       	 <input type="submit" value="Post Comment" />
     	 </form>	 	 
+	 
+	 <?
+	 
+	 if ($row[1] == $_SESSION['uid']) {
+	 
+	 ?>
+
+	 <form action="comment/post-delete.php" method="post">
+         <input type="hidden" value=<? echo "\"$row[0]\""?> name="post_id" />
+         <input type="submit" value="Delete Post" />
+         </form>
+	 
+	 <?
+
+	 }
+	 
+	 ?>		
 
 	 <?	 
 	  

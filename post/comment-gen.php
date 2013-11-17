@@ -1,13 +1,10 @@
 <?php
 
-function gen_comments($con, $pid) {
+function gen_comments($con, $post) {
 	
-	$query = "SELECT * FROM posts WHERE id=$pid LIMIT 1";
-	$result = mysql_query($query, $con);
-	$post = mysql_fetch_array($result);
-
+        $pid = $post[0];
+        $uid = $post[1];
 	
-
 	$post_context_ids = array($post[1]);
 
 	$query = "SELECT * FROM comments WHERE pid=$pid";
@@ -18,7 +15,11 @@ function gen_comments($con, $pid) {
 	       	  $post_context_ids[] = $comment_row[2];
 		 }
 		$index = array_search($comment_row[2], $post_context_ids);
-               echo "<li>$index: $comment_row[3]</li>";
+               if ($comment_row[2] == $_SESSION['uid']) {
+		  $index = "me";
+	       }
+	       echo "<li>$index: $comment_row[3]</li>";
+	       
          }
 	 ?> </ul> <?
 	 

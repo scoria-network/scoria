@@ -13,10 +13,10 @@ function gen_friendrequest($row, $con) {
 	 ?>
 	 
 	 <form action="findfriends/accept-request.php" method="post">
-         <input type="hidden" value=<? echo "\"$row[2]\""?> name="sender_id" />
-         <input type="hidden" value=<? echo "\"$row[1]\""?> name="receiver_id" />
-         <input type="submit" value="Accept" />
-	 <input type="submit" value="Decline" />
+         <input type="hidden" value=<? echo "\"$row[1]\""?> name="sender_id" />
+         <input type="hidden" value=<? echo "\"$row[2]\""?> name="receiver_id" />
+         <input type="submit" name="accept" value="Accept" />
+	 <input type="submit" name="decline" value="Decline" />
          </form>
 
 	 <?	 
