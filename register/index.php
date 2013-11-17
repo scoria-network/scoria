@@ -17,6 +17,9 @@ if ($err) {
 ?>
 <form action="register.php" method="post">
 <p>
+  Name: <input type="text" name="name" />
+</p>
+<p>
   Email: <input type="text" name="email" />
 </p>
 <p>

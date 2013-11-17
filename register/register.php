@@ -12,26 +12,25 @@ if (mysql_num_rows(mysql_query($query, $con))) {
    die();
 }
 
-$username = $_POST[username];
+$name = $_POST[name];
 $password = $_POST[password];
 $cpassword = $_POST[cpassword];
 $email = $_POST[email];
-$age = $_POST[age];
 
 if ($password != $cpassword) {
      header("Location: ../register/?err=2");
      die();
 }
-else if ($username == "" || $password == "" || $age == "") {
+else if ($password == "" || $email == "") {
      header("Location: ../register/?err=3");
      die();
 }
 
 $pwhash = hash("sha256", $_POST[password]);
 $now = time();
-$query = "INSERT INTO userinfo (email, password)
+$query = "INSERT INTO userinfo (email, password, name)
 VALUES
-('$email','$pwhash')";
+('$email','$pwhash', '$name')";
 
 if (!mysql_query($query, $con)) {
    die('Error: ' . mysql_error());

@@ -1,6 +1,6 @@
 div {position:absolute;}
-.posts-table {width:350px; left:200px; top:10px;}
-.title-col {width:100px;}
+.posts-table {width:350px; left:300px; top:10px;}
+.title-col {width:300px;}
 .logout {postion:relative; right:0px; background-color:#3b5998; text-color:#ffffff;}
 .upper-right-cp {top:5px; right:5px; width:200px; height:30px;}
 .username {position:relative;}

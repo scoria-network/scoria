@@ -6,6 +6,7 @@ if (isset($_SESSION['uid'])) {
 ?>
 
 <html>
+
 <body>
 
 <form title="Login:" action="login.php" method="post">

@@ -2,7 +2,7 @@
   session_start();
   $id = $_SESSION['uid'];
   $con = mysql_connect("localhost", "root", "");
-  mysql_select_db("MySite1", $con);
+  mysql_select_db("Scoria", $con);
   $query = "SELECT * FROM userinfo WHERE id='$id' LIMIT 1";
   $result = mysql_query($query, $con);
   $array = mysql_fetch_row($result);
