@@ -4,6 +4,10 @@
   session_start();
   require_once('post/post-gen.php');
   require_once('findfriends/friendrequest-gen.php');
+  require_once('message-gen.php');
+  if (!isset($_SESSION['uid'])) {
+     header("Location: ./");
+  }
 ?>
 
 <html>
@@ -20,6 +24,8 @@
       $query = "SELECT * FROM userinfo WHERE id='$id' LIMIT 1";
       $result = mysql_query($query, $con);
       $userinfo = mysql_fetch_row($result);
+
+      generate_alert_messages();
 
       echo "<p>
               Welcome, $userinfo[3]!

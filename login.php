@@ -6,7 +6,7 @@ mysql_select_db("Scoria", $con);
 
 $pwhash = hash("sha256", $_POST[password]);
 
-$query = "SELECT * FROM userinfo WHERE email='$_POST[email]' AND password='$pwhash' LIMIT 1";
+$query = sprintf("SELECT * FROM userinfo WHERE email='%s' AND password='$pwhash' LIMIT 1", mysql_real_escape_string($_POST['email']));
 
 $result = mysql_query($query, $con);
 if (mysql_num_rows($result)) {
