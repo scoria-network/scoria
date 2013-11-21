@@ -32,7 +32,10 @@ $query = "INSERT INTO userinfo (email, password, name)
 VALUES
 ('$email','$pwhash', '$name')";
 
-if (!mysql_query($query, $con)) {
+if (mysql_query($query, $con)) {
+   u
+}
+else {
    die('Error: ' . mysql_error());
 }
 

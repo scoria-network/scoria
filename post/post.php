@@ -6,6 +6,6 @@
   $content = $_POST['content'];
   $uid = $_SESSION['uid'];
   mysql_query("INSERT INTO posts (uid, content) VALUES($uid, '$content')", $con);
-  header("Location: ../post/?success=1");
+  header("Location: /");
   mysql_close($con);
 ?>

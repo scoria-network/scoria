@@ -6,7 +6,7 @@
   $pid = $_POST['post_id'];
   $uid = $_SESSION['uid'];
   mysql_query("INSERT INTO comments (pid, uid, content) VALUES($pid, $uid, '$content')", $con);
-  header("Location: ../main.php?success=1");
+  header("Location: /");
   mysql_close($con);
 
 ?>
