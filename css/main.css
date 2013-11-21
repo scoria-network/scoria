@@ -23,37 +23,33 @@ body {
   margin-left:auto; 
   margin-right:auto;
 }
-
 .left {
   float: left;
   margin-right: 6px;
 }
-
 .content {
   width: 400px;
   padding: 10px;
   float: left;
 }
-
 .right {
   float: right;
   margin-left: 5px;
 }
-
 .side {
   width: 194px;
   padding: 10px;
 }
-
 .register {
-  width: 392px;
+  width: 395px;
   padding: 11px;
 }
-
 .form-register {
   margin-top: 11px;
 }
-
 .btn-default {
   background-color: #fcfcfc;
+}
+.navbar {
+  margin-bottom: 5;
 }

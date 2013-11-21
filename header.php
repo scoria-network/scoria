@@ -21,7 +21,7 @@
 	<a class="navbar-brand" href="/">Scoria</a>
       </div>
 
-      <form class="navbar-form navbar-left" method="post" action="post/post.php" style="width:410px; padding-left:5px; padding-right:5px;">
+      <form class="navbar-form navbar-left" method="post" action="post/post.php" style="width:410px; padding-left:4px; padding-right:5px;">
 	<div class="form-group">
 	  <input type="text" name="content" class="form-control" style="width:285px; margin-right:5px;" placeholder="What's on your mind?">
 	</div>

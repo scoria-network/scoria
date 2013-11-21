@@ -6,7 +6,8 @@
      $user = mysql_fetch_row($result);
      
      echo "<p>
-           Welcome, $user[3]!
+           Welcome, <br>
+	   &nbsp;&nbsp;&nbsp;&nbsp;$user[3]
 	   </p>";
      /* if (!$user[5]) {
      echo "<p>
