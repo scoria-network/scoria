@@ -2,12 +2,11 @@
    require('header.php');
    if(isset($_SESSION['uid'])) {
       require('user-pane.php');
-      require('posts-pane.php');
+      require('about-pane.php');
       require('friend-pane.php'); 
    }
    else {
-      require_once('about-pane.php');
-      require_once('register-pane.php');
+      header("Location: /");
    }
 
    require_once('footer.php');

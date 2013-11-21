@@ -10,8 +10,8 @@ body {
 .upper-right-cp {top:5px; right:5px; width:200px; height:30px;}
 .username {position:relative;} */
 .pane {
-background-color: #fcfcfc;
-border:1px solid #e5e5e5;
+  background-color: #fcfcfc;
+  border:1px solid #e5e5e5;
  -webkit-border-radius: 5px;
  -moz-border-radius: 5px;
  border-radius: 5px;
@@ -25,22 +25,35 @@ border:1px solid #e5e5e5;
 }
 
 .left {
-  width: 194px;
-  padding: 10px;
   float: left;
-  margin-right: 1px;
+  margin-right: 6px;
 }
 
 .content {
   width: 400px;
   padding: 10px;
   float: left;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 .right {
+  float: right;
+  margin-left: 5px;
+}
+
+.side {
   width: 194px;
   padding: 10px;
-  float: right;
+}
+
+.register {
+  width: 392px;
+  padding: 11px;
+}
+
+.form-register {
+  margin-top: 11px;
+}
+
+.btn-default {
+  background-color: #fcfcfc;
 }

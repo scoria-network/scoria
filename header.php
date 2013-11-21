@@ -18,7 +18,7 @@
   <body>
     <nav class="navbar navbar-default pane full" role="navigation">
       <div class="navbar-header" style="width:195px;">
-	<a class="navbar-brand" href="#">Scoria</a>
+	<a class="navbar-brand" href="/">Scoria</a>
       </div>
 
       <form class="navbar-form navbar-left" method="post" action="post/post.php" style="width:410px; padding-left:5px; padding-right:5px;">
@@ -29,7 +29,7 @@
       </form>
 
       <div class="navbar-left" style="width:193;">
-	<button type="button" class="btn btn-default navbar-btn" id="about" style="width:88px; margin-right: 5px; float:left; margin-left:1px;">
+	<button type="button" class="btn btn-default navbar-btn" id="about" onclick="location.href='about'" style="width:88px; margin-right: 5px; float:left; margin-left:1px;">
 	  About
 	</button> 
 	<button type="button" class="btn btn-default navbar-btn" id="logout" onclick="location.href='logout.php'" style="margin-right:10px; width: 88px; float:right">
@@ -40,5 +40,20 @@
     
     <div class="full">
 <?php else: ?>
+  <body>
+    <nav class="navbar navbar-default pane full" role="navigation">
+      <div class="navbar-header" style="width:195px;">
+	<a class="navbar-brand" href="#">Scoria</a>
+      </div>
 
+      <form class="navbar-form navbar-right form-inline" action="login-function.php" method="post" style="padding-left:5px; padding-right:10px;">
+	<div class="form-group">
+	  <input class="form-control" type="text" name="email" style="width:200px; margin-right:5px;" placeholder="Email">
+	  <input class="form-control" type="password" name="password" style="width:200px; margin-right:5px;" placeholder="Password">
+	</div>
+	<button type="submit" class="btn btn-default">Log In</button>
+      </form>
+    </nav>
+    
+    <div class="full">
 <?php endif; ?>

@@ -1,4 +1,4 @@
-<div class="pane right">
+<div class="pane right side">
     <p>
       <a href="findfriends">Find friends!</a>
     </p>

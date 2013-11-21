@@ -12,7 +12,10 @@ if (mysql_num_rows(mysql_query($query, $con))) {
    die();
 }
 
-$name = $_POST[name];
+$firstname = $_POST[firstname];
+$lastname = $_POST[lastname];
+
+$name = $firstname." ".$lastname;
 $password = $_POST[password];
 $cpassword = $_POST[cpassword];
 $email = $_POST[email];
