@@ -33,7 +33,7 @@ VALUES
 ('$email','$pwhash', '$name')";
 
 if (mysql_query($query, $con)) {
-   u
+   
 }
 else {
    die('Error: ' . mysql_error());

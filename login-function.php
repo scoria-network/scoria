@@ -15,7 +15,7 @@ if (mysql_num_rows($result)) {
    $_SESSION['uid'] = $row[0];
    //echo $_SESSION['uid'];
    //echo "Welcome, $row[1]!";
-   header("Location: index.php");
+   header("Location: /");
 }
 else {
    echo "login failed";

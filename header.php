@@ -14,15 +14,10 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>Scoria</title>
   </head>
+<?php if(isset($_SESSION['user'])): ?>
   <body>
     <nav class="navbar navbar-default pane full" role="navigation">
-      <div class="navbar-header" style="width:200px;">
-	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	  <span class="sr-only">Toggle navigation</span>
-	  <span class="icon-bar"></span>
-	  <span class="icon-bar"></span>
-	  <span class="icon-bar"></span>
-	</button>
+      <div class="navbar-header" style="width:195px;">
 	<a class="navbar-brand" href="#">Scoria</a>
       </div>
 
@@ -33,14 +28,17 @@
 	<button type="submit" class="btn btn-default" style="width:105px;">Create Post</button>
       </form>
 
-      <div class="navbar-left" style="width:188;">
-	<button type="button" class="btn btn-default navbar-btn" id="about" style="width:80px; margin-right: 5px; margin-left: 8px;">
+      <div class="navbar-left" style="width:193;">
+	<button type="button" class="btn btn-default navbar-btn" id="about" style="width:88px; margin-right: 5px; float:left; margin-left:1px;">
 	  About
 	</button> 
-	<button type="button" class="btn btn-default navbar-btn" id="logout" style="margin-right:10px; width: 80px; float:right">
+	<button type="button" class="btn btn-default navbar-btn" id="logout" onclick="location.href='logout.php'" style="margin-right:10px; width: 88px; float:right">
 	  Log Out
 	</button> 
       </div>
     </nav>
     
     <div class="full">
+<?php else: ?>
+
+<?php endif; ?>
