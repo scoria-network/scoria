@@ -6,8 +6,8 @@
       require('panes/friends.pane'); 
    }
    else {
-      require_once('about-pane.php');
-      require_once('register-pane.php');
+      require_once('panes/about.pane');
+      require_once('panes/register.pane');
    }
 
    require_once('footer.php');
