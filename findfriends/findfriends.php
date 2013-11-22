@@ -11,19 +11,19 @@
   echo $array[3];
 
   if ($_POST[friendemail] == "") {
-    header("Location: ../findfriends/?err=1");
+    header("Location: /");
     die();
   }
-  else if ($friend == $user) {
+/*  else if ($friend == $user) {
     header("Location: ../findfriends/?err=2");
-  }    
+  }    */
   else if ($friend) {
     mysql_query("INSERT INTO friendrequests (sender_id, receiver_id) VALUES($user[0], $friend[0])");
-    header ("Location: ../findfriends/?success=1");
+    header ("Location: /");
     die();
   }
   else {
-    header ("Location: ../findfriends/?err=3");
+    header ("Location: /");
     die();
   }
 ?>

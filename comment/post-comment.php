@@ -5,9 +5,8 @@
   $content = $_POST['content'];
   $pid = $_POST['post_id'];
   $uid = $_SESSION['uid'];
-  $query = sprintf("INSERT INTO comments (pid, uid, content) VALUES($pid, $uid, '%s')"), mysql_real_escape_string($content));
-  mysql_query($query, $con);
-  header("Location: ../main.php?success=1");
+  mysql_query("INSERT INTO comments (pid, uid, content) VALUES($pid, $uid, '$content')", $con);
+  header("Location: /");
   mysql_close($con);
 
 ?>

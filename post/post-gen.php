@@ -19,8 +19,8 @@ function gen_post($row, $con) {
 	 
 	 <form action="comment/post-comment.php" method="post">
       	 <input type="hidden" value=<? echo "\"$row[0]\""?> name="post_id" />
-	 <input type="text" name="content" size=35 />
-      	 <input type="submit" value="Post Comment" />
+	 <input type="text" class="form-control" name="content" placeholder="Write a comment..."/>
+      	 <input type="submit" class="btn btn-primary post-comment" value="Post Comment" />
     	 </form>	 	 
 	 
 	 <?
@@ -29,7 +29,7 @@ function gen_post($row, $con) {
 	 
 	 ?>
 
-	 <form action="comment/post-delete.php" method="post">
+	 <form action="post/post-delete.php" method="post">
          <input type="hidden" value=<? echo "\"$row[0]\""?> name="post_id" />
          <input type="submit" value="Delete Post" />
          </form>

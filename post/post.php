@@ -3,10 +3,11 @@
   session_start();
   $con = mysql_connect("localhost", "root", "");
   mysql_select_db("Scoria", $con);
-  $content = $_POST['content'];
+  $content = trim($_POST['content']);
   $uid = $_SESSION['uid'];
-  $query = sprintf("INSERT INTO posts (uid, content) VALUES($uid, '%s')", mysql_real_escape_string($content));
-  mysql_query("INSERT INTO posts (uid, content) VALUES($uid, '$content')", $con);
-  header("Location: ../post/?success=1");
+  if($content != ""){
+    mysql_query("INSERT INTO posts (uid, content) VALUES($uid, '$content')", $con);
+  }
+  header("Location: /");
   mysql_close($con);
 ?>

@@ -31,15 +31,6 @@
       }
     ?>
 
-    <p>
-      <b>Find Friends</b>
-    </p>
-    <form action="findfriends.php" method="post">
-      <p>
-        Friend's email address <input name="friendemail" />
-      </p>
-      <input type="submit" />
-    </form>
 
   </body>
 </html>

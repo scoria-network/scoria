@@ -12,7 +12,10 @@ if (mysql_num_rows(mysql_query($query, $con))) {
    die();
 }
 
-$name = $_POST[name];
+$firstname = $_POST[firstname];
+$lastname = $_POST[lastname];
+
+$name = $firstname." ".$lastname;
 $password = $_POST[password];
 $cpassword = $_POST[cpassword];
 $email = $_POST[email];
@@ -31,7 +34,10 @@ $now = time();
 $query = sprintf("INSERT INTO userinfo (email, password, name) 
        	 		       	 	      VALUES   ('%s','$pwhash', '%s')", mysql_real_escape_string($email), mysql_real_escape_string($name));
 
-if (!mysql_query($query, $con)) {
+if (mysql_query($query, $con)) {
+   
+}
+else {
    die('Error: ' . mysql_error());
 }
 
