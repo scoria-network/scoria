@@ -47,8 +47,12 @@ body {
 .form-register {
   margin-top: 11px;
 }
-.btn-default {
-  background-color: #fcfcfc;
+.post-comment {
+  margin-top:5px;
+  float:right;
+}
+.btn-friend-req {
+  margin-top:5px;
 }
 .navbar {
   margin-bottom: 5;

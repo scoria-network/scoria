@@ -6,17 +6,17 @@ function gen_friendrequest($row, $con) {
 
 
 	 echo "<tr>
-                  <td class=\"title-col\">Friend request from:</br> $friend[3]";
+                  <td class=\"title-col\">$friend[3]";
 		  
 		  
 		  
 	 ?>
 	 
-	 <form action="findfriends/accept-request.php" method="post">
+	 <form action="findfriends/accept-request.php" method="post" style="margin-bottom:3px">
          <input type="hidden" value=<? echo "\"$row[1]\""?> name="sender_id" />
          <input type="hidden" value=<? echo "\"$row[2]\""?> name="receiver_id" />
-         <input type="submit" name="accept" value="Accept" />
-	 <input type="submit" name="decline" value="Decline" />
+         <input type="submit" class="btn btn-success btn-friend-req" name="accept" value="Accept" />
+	 <input type="submit" class="btn btn-danger btn-friend-req" name="decline" value="Decline" style="float:right" />
          </form>
 
 	 <?	 

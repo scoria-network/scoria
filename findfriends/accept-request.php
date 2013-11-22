@@ -19,7 +19,7 @@
   $result = mysql_query($query, $con);
 
   
-  header("Location: ../index.php?success=1");
+  header("Location: /");
   mysql_close($con);
 
 ?>
