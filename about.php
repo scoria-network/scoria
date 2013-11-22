@@ -1,9 +1,9 @@
 <?php 
    require('header.php');
    if(isset($_SESSION['uid'])) {
-      require('user-pane.php');
-      require('about-pane.php');
-      require('friend-pane.php'); 
+      require('panes/user.pane');
+      require('panes/about.pane');
+      require('panes/friends.pane'); 
    }
    else {
       header("Location: /");

@@ -1,9 +1,9 @@
 <?php 
    require('header.php');
    if(isset($_SESSION['uid'])) {
-      require('user-pane.php');
-      require('posts-pane.php');
-      require('friend-pane.php'); 
+      require('panes/user.pane');
+      require('panes/posts.pane');
+      require('panes/friends.pane'); 
    }
    else {
       require_once('about-pane.php');
