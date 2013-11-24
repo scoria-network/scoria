@@ -18,8 +18,20 @@ function gen_comments($con, $post) {
                if ($comment_row[2] == $_SESSION['uid']) {
 		  $index = "me";
 	       }
-	       echo "<li>$index: $comment_row[3]</li>";
-	       
+	       echo "<li>$index: $comment_row[3]";
+
+	       if ($comment_row[2] == $_SESSION['uid']) {
+         ?>
+
+                  <form action="../comment/comment-delete.php" method="post" style="margin-bottom:0px;float:right">
+                    <input type="hidden" value=<? echo "\"$comment_row[0]\""?> name="comment_id" />
+           	    <input type="submit" value="Delete" class="btn btn-link btn-xs" style="margin-bottom:5px; color:#d9534f" />
+           	  </form>
+
+          <?php
+		}	
+
+	       echo "</li>";
          }
 	 ?> </ul> <?
 	 

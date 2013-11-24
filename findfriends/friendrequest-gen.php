@@ -15,8 +15,8 @@ function gen_friendrequest($row, $con) {
 	 <form action="findfriends/accept-request.php" method="post" style="margin-bottom:3px">
          <input type="hidden" value=<? echo "\"$row[1]\""?> name="sender_id" />
          <input type="hidden" value=<? echo "\"$row[2]\""?> name="receiver_id" />
-         <input type="submit" class="btn btn-success btn-friend-req" name="accept" value="Accept" />
-	 <input type="submit" class="btn btn-danger btn-friend-req" name="decline" value="Decline" style="float:right" />
+         <input type="submit" class="btn btn-primary btn-friend-req" name="accept" value="Accept" />
+	 <input type="submit" class="btn btn-default btn-friend-req" name="decline" value="Decline" style="float:right" />
          </form>
 
 	 <?	 

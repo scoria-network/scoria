@@ -1,6 +1,6 @@
 <div class="pane content">
   <b>Posts</b><br />
-  <table class="table table-striped" style="width:100%">
+  <table class="table table-striped" style="width:100%;">
     <?php
        $friend_ids = array();
        $result = mysql_query("SELECT * FROM friendships WHERE id1=$id", $con);

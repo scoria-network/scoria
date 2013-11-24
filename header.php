@@ -25,7 +25,7 @@
 	<div class="form-group">
 	  <input type="text" name="content" class="form-control" style="width:285px; margin-right:5px;" placeholder="What's on your mind?">
 	</div>
-	<button type="submit" class="btn btn-default" style="width:105px;">Create Post</button>
+	<button type="submit" class="btn btn-primary" style="width:105px;">Create Post</button>
       </form>
 
       <div class="navbar-left" style="width:193;">

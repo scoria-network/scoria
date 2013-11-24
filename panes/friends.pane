@@ -10,6 +10,7 @@
      $result = mysql_query($query, $con);
      if($row = mysql_fetch_array($result)):
   ?>
+  <div style="margin-top:10px">
     <b>Friend Requests</b>
     <table class="table table-striped" style="margin-bottom:0px; margin-top:10px">
       <?php
@@ -19,4 +20,5 @@
       ?>
     </table>
     <?php endif; ?>
+  </div>
 </div>

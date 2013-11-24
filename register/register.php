@@ -50,12 +50,13 @@ if ($result) {
    $query = "INSERT INTO friendships (id1, id2) VALUES ($user[0], $user[0])";
    mysql_query($query, $con);
    $_SESSION['uid'] = $user[0];
+   $_SESSION['user'] = $user;
 }
 
 
 sendveremail($email);
 
-header("Location: ../main.php");
+header("Location: ../");
 
 mysql_close($con);
 ?>
