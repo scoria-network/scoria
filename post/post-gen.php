@@ -9,7 +9,7 @@ function gen_post($row, $con) {
 	    $index = "me";
 	 }  
 	 
-	 echo "<tr style=\"width:100%\">
+	 echo "<tr>
                   <td class=\"title-col\">";
 
 	if ($row[1] == $_SESSION['uid']) {
