@@ -64,3 +64,7 @@ body {
 .btn-default {
   background-color: #fcfcff;
 }
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
