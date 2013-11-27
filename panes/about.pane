@@ -1,5 +1,12 @@
 <div class="content pane">
   <h3 style="margin-top:0px; margin-bottom:0px">About Scoria</h3>
   <br>Scoria is a semi-anonymous social network.<br><br>
-  You know who your friends are, but you don't know which friend authors which post!
+  You know who your friends are, but you don't know which friend authors which post!<br><br>
+  Scoria is in pre-release development.<br><br>
+  <?php 
+     $countarr = mysql_fetch_array(mysql_query("SELECT COUNT(*) FROM userinfo")); 
+     $count = $countarr[0];
+     echo "Registered users: ".$count;;
+  ?>
+  
 </div>

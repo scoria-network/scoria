@@ -1,7 +1,8 @@
 <?php 
    require('header.php');
    if(isset($_SESSION['uid'])) {
-      require('panes/user.pane');
+      $leftpane = 'panes/'.$_SESSION['leftpane'].'.pane';
+      require($leftpane);
       require('panes/posts.pane');
       require('panes/friends.pane'); 
    }

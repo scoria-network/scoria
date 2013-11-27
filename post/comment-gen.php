@@ -9,7 +9,7 @@ function gen_comments($con, $post) {
 
 	$query = "SELECT * FROM comments WHERE pid=$pid";
          $result = mysql_query($query, $con);
-	?> <ul> <?
+	?> <ul style="padding-left:20"> <?
 	 while ($comment_row = mysql_fetch_array($result)) {
 	       if (!in_array($comment_row[2], $post_context_ids)) {
 	       	  $post_context_ids[] = $comment_row[2];
@@ -20,7 +20,7 @@ function gen_comments($con, $post) {
 	       }
 	       echo "<li>$index: $comment_row[3]";
 
-	       if ($comment_row[2] == $_SESSION['uid']) {
+	       if (5 < 4/*$comment_row[2] == $_SESSION['uid']*/) {
          ?>
 
                   <form action="../comment/comment-delete.php" method="post" style="margin-bottom:0px;float:right">

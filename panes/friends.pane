@@ -6,6 +6,7 @@
     </form>
 
   <?php
+     $id = $_SESSION['uid'];
      $query = "SELECT * FROM friendrequests WHERE receiver_id=$id";
      $result = mysql_query($query, $con);
      if($row = mysql_fetch_array($result)):

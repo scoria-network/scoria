@@ -47,6 +47,9 @@ body {
 .form-register {
   margin-top: 11px;
 }
+.form-changepw {
+  margin-top: 5px;
+}
 .post-comment {
   margin-top:5px;
   float:right;

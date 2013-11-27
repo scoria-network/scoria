@@ -2,6 +2,7 @@
   <b>Posts</b><br />
   <table class="table table-striped">
     <?php
+       $id = $_SESSION['uid'];
        $friend_ids = array();
        $result = mysql_query("SELECT * FROM friendships WHERE id1=$id", $con);
        while ($friendship_row = mysql_fetch_array($result)) {
@@ -9,9 +10,14 @@
        }
        $query = 'SELECT * FROM posts WHERE uid IN (' . implode(',', array_map('intval', $friend_ids)) . ') ORDER BY id DESC';
        $result = mysql_query($query, $con);
-	   
-       while($row = mysql_fetch_array($result)) {
-	 gen_post($row, $con);
+	 
+       if($row = mysql_fetch_array($result)) {
+         do {
+           gen_post($row, $con);
+         } while($row = mysql_fetch_array($result));
+       } 
+       else {
+         echo "<br>You have no posts to read!<br>Try creating a post or finding a friend!";
        }
        ?>
   </table>

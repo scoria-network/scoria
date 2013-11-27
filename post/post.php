@@ -5,6 +5,7 @@
   mysql_select_db("Scoria", $con);
   $content = trim($_POST['content']);
   $uid = $_SESSION['uid'];
+  $content = str_replace("'", "''", $content);
   if($content != ""){
     mysql_query("INSERT INTO posts (uid, content) VALUES($uid, '$content')", $con);
   }

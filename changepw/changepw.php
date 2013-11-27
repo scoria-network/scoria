@@ -11,25 +11,22 @@
   $cnewpw = $_POST[cnewpw];
   
   if ($curpw == "" || $newpw == "" || $cnewpw == "") {
-    header("Location: ../changepw/?err=1");
-    die();
+//    header("Location: ../changepw/?err=1");
   }
   else if ($newpw != $cnewpw) {
-    header("Location: ../changepw/?err=2");
-    die();
+//    header("Location: ../changepw/?err=2");
   }
   else if ($array[2] != hash("sha256", $curpw)) {
-    header("Location: ../changepw/?err=3");
-    die();
+//    header("Location: ../changepw/?err=3");
   }
   else if ($curpw == $newpw) {
-    header("Location: ../changepw/?err=4");
-    die();
+//    header("Location: ../changepw/?err=4");
   }
   else {
     $query = "UPDATE userinfo SET password='" . hash("sha256", $newpw) . "' WHERE id=$id";
     mysql_query($query, $con);
-    header ("Location: ../changepw/?success=1");
-    die();
+    $_SESSION['leftpane'] = 'user';
   }
+  header("Location: /");
+  die();
 ?>

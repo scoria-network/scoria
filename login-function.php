@@ -13,6 +13,7 @@ if (mysql_num_rows($result)) {
    $row = mysql_fetch_row($result);
    $_SESSION['user'] = $row;
    $_SESSION['uid'] = $row[0];
+   $_SESSION['leftpane'] = "user";
    //echo $_SESSION['uid'];
    //echo "Welcome, $row[1]!";
    header("Location: /");

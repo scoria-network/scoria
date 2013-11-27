@@ -12,7 +12,7 @@ function gen_post($row, $con) {
 	 echo "<tr>
                   <td class=\"title-col\">";
 
-	if ($row[1] == $_SESSION['uid']) {
+	if (5<4/*$row[1] == $_SESSION['uid']*/) {
          ?>
 
          <form action="post/post-delete.php" method="post" style="margin-bottom:0px;float:right">

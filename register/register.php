@@ -51,6 +51,7 @@ if ($result) {
    mysql_query($query, $con);
    $_SESSION['uid'] = $user[0];
    $_SESSION['user'] = $user;
+   $_SESSION['leftpane'] = "user";
 }
 
 

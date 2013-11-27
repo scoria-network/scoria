@@ -1,0 +1,12 @@
+<div class="pane left side">
+  <p>
+    <b>Change Password</b>
+<button class="btn btn-default btn-xs" action="/functions/leftpane-user.php" style="float:right">back</button>
+  </p>
+  <form action="/changepw/changepw.php" method="post" style="margin-bottom:0px;">
+    <input type="password" name="curpw" class="form-control form-changepw" placeholder="Current Password" autocomplete="off">
+    <input type="password" name="newpw" class="form-control form-changepw" placeholder="New Password">
+    <input type="password" name="cnewpw" class="form-control form-changepw" placeholder="Repeat New Password">
+    <input type="submit" value="Change Password" class="btn btn-primary" style="width:100%; margin-top:5px;"/>
+  </form>
+</div>
