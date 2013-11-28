@@ -19,6 +19,6 @@
        } */
   ?>
   <p>
-    <a href="changepw">Change Password</a>
+    <button class="btn btn-default btn-sm" style="width:100%" onclick="location.href='changepw'">Change Password</button>
   </p>
 </div>  
