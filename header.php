@@ -29,8 +29,8 @@
       </form>
 
       <div class="navbar-left" style="width:193;">
-	<button type="button" class="btn btn-default navbar-btn" id="about" onclick="location.href='about'" style="width:88px; margin-right: 5px; float:left; margin-left:1px;">
-	  About
+	<button type="button" class="btn btn-default navbar-btn" id="about" onclick="location.href='settings'" style="width:88px; margin-right: 5px; float:left; margin-left:1px;">
+	  Settings
 	</button> 
 	<button type="button" class="btn btn-default navbar-btn" id="logout" onclick="location.href='logout.php'" style="margin-right:10px; width: 88px; float:right">
 	  Log Out

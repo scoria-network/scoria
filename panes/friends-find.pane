@@ -1,0 +1,7 @@
+<div class="pane right side">
+  <b>Find Friends</b>
+  <form action="findfriends/findfriends.php" method="post" style="margin-bottom:0px;">
+    <input name="friendemail" placeholder="Friend's email address" class="form-control form-register" />
+    <input type="submit" class="btn btn-primary btn-sm" style="width:100%; margin-top:5px;" value="Send Friend Request">
+  </form>
+</div>

@@ -1,0 +1,7 @@
+<div class="content pane">
+  <b>Email Addresses</b>
+  <br>
+  <?php
+     echo ("<input class=\"form-control\" type=\"text\" placeholder=\"".$_SESSION['user'][1]."\" disabled=\"true\" style=\"margin-top:5px;\"> ")
+  ?>
+</div>

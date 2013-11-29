@@ -14,12 +14,9 @@
   }
 
   $query = "DELETE FROM friendrequests WHERE sender_id=$sender_id AND receiver_id=$receiver_id";
-  
-  
   $result = mysql_query($query, $con);
 
   
   header("Location: /");
   mysql_close($con);
-
 ?>

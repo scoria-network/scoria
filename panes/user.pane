@@ -18,7 +18,5 @@
        </p>";
        } */
   ?>
-  <p>
-    <button class="btn btn-default btn-sm" style="width:100%" onclick="location.href='changepw'">Change Password</button>
-  </p>
+  <button class="btn btn-default btn-sm" style="width:100%" onclick="location.href='about'">What is Scoria?</button>
 </div>  
