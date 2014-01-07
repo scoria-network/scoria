@@ -1,0 +1,44 @@
+<div class="content pane">
+  <b>Timezone</b>
+  <br>
+  <form role="form">
+  <br>
+  <select>
+      <?php for($i = -14; $i <= 14; $i++): ?>
+      <?php
+         if(($i+14) % 4 == 0) {
+            echo "</tr><tr>";
+         }
+
+         $timezone = "GMT";
+         if ($i > 0) {
+           $timezone = $timezone."+".$i;
+         }
+         else if ($i < 0) {
+           $timezone = $timezone.$i;
+         }
+      ?>
+      <option value=<?php echo "\"".$i."\"" ?> name="timezone"><?php echo $timezone; ?></option>
+      <?php endfor; ?>
+    </select>
+
+<!--    <table>
+      <?php for($i = -14; $i <= 14; $i++): ?>
+      <?php
+         if(($i+14) % 4 == 0) {
+            echo "</tr><tr>";
+         }
+
+         $timezone = "GMT";
+	 if ($i > 0) {
+           $timezone = $timezone."+".$i;
+	 }
+	 else if ($i < 0) {
+	   $timezone = $timezone.$i;
+         }
+      ?>
+      <input type="radio" name="timezone"><?php echo "&nbsp;".$timezone." | "; ?></radio>
+      <?php endfor; ?>
+    </table> --!>
+  </form>
+</div>

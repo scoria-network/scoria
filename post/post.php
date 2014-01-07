@@ -5,10 +5,11 @@
   mysql_select_db("Scoria", $con);
   $content = trim($_POST['content']);
   $uid = $_SESSION['uid'];
-  $content = str_replace("'", "''", $content);
-  if($content != ""){
-    mysql_query("INSERT INTO posts (uid, content) VALUES($uid, '$content')", $con);
-  }
+  $content = htmlentities(str_replace("'", "''", $content));
+  $time = time();
+  $query = sprintf("INSERT INTO posts (uid, content, timestamp) VALUES($uid, '%s', $time)", mysql_real_escape_string($content));
+  mysql_query($query, $con);
+
   header("Location: /");
   mysql_close($con);
 ?>

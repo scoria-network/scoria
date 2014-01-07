@@ -5,8 +5,10 @@
   $content = $_POST['content'];
   $pid = $_POST['post_id'];
   $uid = $_SESSION['uid'];
-  $content = str_replace("'", "''", $content);
-  mysql_query("INSERT INTO comments (pid, uid, content) VALUES($pid, $uid, '$content')", $con);
+  $content = htmlentities(str_replace("'", "''", $content));
+  $time = time();
+  $query = sprintf("INSERT INTO comments (pid, uid, content, timestamp) VALUES($pid, $uid, '%s', $time)", mysql_real_escape_string($content));
+  mysql_query($query, $con);
   header("Location: /");
   mysql_close($con);
 

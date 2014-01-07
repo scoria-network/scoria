@@ -12,6 +12,10 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--script src="css/dist/js/jquery-2.0.3.js"></script-->
+    <!--script src="css/dist/js/bootstrap.js"></script-->
+
     <title>Scoria</title>
   </head>
 <?php if(isset($_SESSION['user'])): ?>

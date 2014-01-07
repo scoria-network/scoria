@@ -1,4 +1,5 @@
 <div class="content-container">
   <?php require('emails.pane'); ?>
+  <?php require('timezone.pane'); ?>
   <?php require('changepw.pane'); ?>
 </div>

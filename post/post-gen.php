@@ -31,7 +31,18 @@ function gen_post($row, $con) {
 	 <form action="comment/post-comment.php" method="post" style="margin-bottom:5px" >
       	 <input type="hidden" value=<? echo "\"$row[0]\""?> name="post_id" />
 	 <input type="text" class="form-control" name="content" placeholder="Write a comment..."/>
-      	 <input type="submit" class="btn btn-primary post-comment" value="Post Comment" />
+	 <?php 
+	    date_default_timezone_set('Etc/GMT+8');
+	    if($row[3]): 
+	 ?>
+	 <div style="float:left; margin-top:10px; margin-left:5px;">
+	   <?php 
+	      $time = $row[3];
+	      echo date('F d',$time)." at ".date('g:ma',$time);
+	   ?>
+	 </div>
+	 <?php endif; ?>
+      	 <input type="submit" class="btn btn-primary post-comment" value="Post Comment"/>
     	 </form>	 	 
 	 
 <?php
